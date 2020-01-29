@@ -1,0 +1,29 @@
+.header {
+    height: 95vh; /* 95% of the viewport height */ 
+    background-image: linear-gradient(to right bottom,
+    rgba($color-primary-light, .5), 
+    rgba($color-primary-dark, .5)), url("../img/header-bg.jpg");
+    background-size: cover; /* will set the width */
+    background-position: top; /*  top keeps the top of the image and will crop the sides --can change with top bottom, center etc */
+    clip-path: polygon(0 0, 100% 0, 100% 81%, 0 100%);
+    position: relative;
+
+    &__logo-box {
+        position: absolute; /*you can pick exactly where you'd like the image to be */
+        top: 40px;
+        left: 40px;  
+    }
+
+    &__logo {
+        height: 35px;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        text-align: center;
+    }
+
+}
